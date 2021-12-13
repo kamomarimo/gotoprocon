@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@media screen and ( max-width: 600px ){
+/* スマホサイズ対応 */
+h1::before { font-size: .5em; margin-right: 1em!important; }
+#CodeSpace { font-size: .7em; }
+}
+::selection{ background-color: gold; }
+* { font-family: sans-serif; word-break: keep-all; overflow-wrap: break-word; margin: 0; padding: 0; }
+body { counter-reset: stepNum 0; position: relative; min-height: 100vh; padding-bottom: 5em; box-sizing: border-box; }
+a[ target = "_blank" ]::after{ content: none!important; }
+a { text-decoration: none!important; padding: 0!important; }
+
+#wrapper { max-width: 98vh; margin: 0 auto; }
+h1::before { content: "ものづくりプロジェクト\02160"; padding: .2em 1em; background: white; color: black; border-radius: 5px; margin-right: .5em; }
+h1 { padding: .7em; font-size: 1.2em; color: white; background-color: #2D5AA1; margin-bottom: .7em; }
+#title { color: white; width : 30%; margin: .5em; padding: .5em; background: navy; border-radius: 5px; }
+#Step { position:relative; height: 3em; line-height: 3em; vertical-align: middle; margin-left: .7em; background-color: cadetblue; margin-bottom: .7em; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 1); }
+#Step:hover { transform: translate( -1px, -3px ); opacity: .3; transition-duration: .3s; }
+#menu { height: 3em; }
+#JumpOfficial { position:relative; width: 16em; height: 1em; line-height: 2em; padding: .5em; background: whitesmoke; border: 1px double #2D5AA1; vertical-align: middle; text-align: center; box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, .5 ); }
+#JumpOfficial a, #Step a { padding-left: .7em!important; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 95%; }
+#JumpOfficial:hover{ opacity: .5 }
+.ToHome { float: right; margin: .2em; background-image: url( ../img/Tohome.png ); width: 40px; height: 40px; margin-right: .5em; }
+.ToHome:hover { transform: translate( -2px, -1px ); opacity: .7; transition-duration: .3s; }
+#troubleS { color: white; width : 30%; margin: .5em; padding: .5em; background: darkred; border-radius: 5px;  }
+.StepNum { border-bottom: dotted 2px forestgreen; margin-bottom: 1em; padding-bottom: .3em; font-size: 1.3em; padding-top: .5em; padding-left: 5em; position: relative; }
+.StepNum::before { content: "Step:"; position: absolute; left: .3em; margin-right: .3em; }
+.StepNum::after { counter-increment: stepNum 1; content: counter( stepNum ); position: absolute; width: 1.5em; left: 3em; top: .3em; height: 1.5em; border-radius: 50%; text-align: center; background: #2D5AA1; color: mintcream; }
+.making { background-color: #cc3300!important; }
+.CommentBox { margin: .5em 0; padding: .2em; border: .05rem dotted grey; }
+.GotoCode { width: 93%;padding: .5rem; background-color: black; color: gold; border-radius: .5em; }
+.kotira a { text-decoration: dotted underline crimson 2px!important; padding: 0 .3em!important; }
+.kotira a[ target = "_blank" ]::after { content: url( ../img/BTN_Link.png )!important; margin: 0 .2em!important; }
+#OBJ { margin-bottom: .3rem; display: inline-block; border: 1px solid black; border-radius: 5px; padding: 0 .5rem; background-color: wheat; font-weight: bold; }
+.balloonLeftB .child { background: midnightblue; position: relative; width: 50%; color: white; padding: 10px; line-height: 1.7em; }
+.balloonLeftB .child:after { content: ' '; width: 0; height: 0; position: absolute; border: 10px solid transparent; border-top-color: midnightblue; top: 100%; left: 10px; }
+.WordImg td { padding: 20px 5px; }
+.imgSearch { background-color: transparent; background-image: url( "../img/search.png" ); background-repeat: no-repeat; background-attachment: scroll; display: inline-block; }
+.img-imgSearch { width: 113px; height: 115px; }
+.Syutten { font-size: .3rem; color: grey; }
+.midasi{ display:block; font-weight: bold; font-size: 1.2rem; width: 93%; background-color: powderblue; padding-top: .2em; padding-left: 1.5em; position:relative; }
+.midasi:before,.midasi:after{ content:""; display: block; position:absolute; }
+.midasi:before{ width: 1rem; height: 1.2rem; background: white; border: 1px solid #000000; left: 3px; top: .4rem;}
+.midasi:after{ border-left: 3px solid #2D5AA1; border-bottom: 3px solid #2D5AA1; width: 18px; height: 5px; -webkit-transform: rotate( -45deg ); transform: rotate( -45deg ); left: 6px; top: 8px; }
+.FileType{ max-width: 20%; background-color: #2D5AA1; padding-left: .3rem; padding-top: .3rem; color: white; border-radius: 5px 5px 0 0; font-size: .9em; }
+.SorceCode { counter-increment: StepNum 1; background-color: black; color: white; }
+.SorceCode::before { content: counter(StepNum, decimal-leading-zero); color: #2D5AA1; padding: 0 .2rem; margin-right: .3rem; background-color: black; border-right: solid thin grey; }
+#CodeSpace { width: 93%; }
+#youken { font-weight: bold; border: 1px solid black; padding: .5rem; width: 80%; background-color: lightgoldenrodyellow; }
+
+/* 画像 */
+/* leapmotion3-1 */
+.LM3_1Img1 { background: url( "../img/LM3_1.png" ); border: .01em grey solid; width: 184px; height: 142px; }
+.LM3_1Img2 { background: url( "../img/LM3_1.png" ); border: .01em grey solid; width: 309px; height: 142px; background-position: 0 -148px; }
+.LM3_1Img3 { background: url( "../img/LM3_1.png" ); border: .01em grey solid; width: 309px; height: 142px; background-position: 0 -295px; }
+.LM3_1Img4 { background: url( "../img/LM3_1.png" ); border: .01em grey solid; width: 309px; height: 142px; background-position: 0 -452px; }
+.LM3_1Img5 { background: url( "../img/LM3_1.png" ); border: .01em grey solid; width: 309px; height: 142px; background-position: 0 -608px; }
+.LM3_1Img6 { background: url( "../img/LM3_1.png" ); border: .01em grey solid; width: 400px; height: 100px; background-position: -7px -753px; }
+.LM3_1Img7 { background: url( "../img/LM3_1.png" ); border: .01em grey solid; width: 400px; height: 160px; background-position: 0 -931px; }
+/* leapmotion3-2:processing */
+.LM3_2_PImg1 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 230px; height: 190px; }
+.LM3_2_PImg2 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 230px; height: 190px; background-position: -262px 0; }
+.LM3_2_PImg3 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 340px; height: 300px; background-position: -150px -250px; }
+.LM3_2_PImg4 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 359px; height: 450px; background-position: 0 -597px; }
+.LM3_2_PImg5 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 400px; height: 363px; background-position: 0 -1174px; }
+.LM3_2_PImg6 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 400px; height: 363px; background-position: 0 -1554px; }
+.LM3_2_PImg7 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 350px; height: 150px; background-position: 0 -2000px; }
+.LM3_2_PImg8 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 350px; height: 150px; background-position: 0 -2000px; }
+.LM3_2_PImg9 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 350px; height: 500px; background-position: -1px -2195px; }
+.LM3_2_PImg10 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 400px; height: 500px; background-position: -1px -2746px; }
+.LM3_2_PImg11 { background: url( "../img/LM3_2_P.png" ); border: .01em grey solid; width: 450px; height: 600px; background-position: 0 -4150px; }
+/* processing2 */
+.ProccesingImg1 { background: url( "../img/Proccesing.png" ); border: .01em grey solid; width: 300px; height: 190px; }
+.ProccesingImg2 { background: url( "../img/Proccesing.png" ); border: .01em grey solid; width: 300px; height: 400px; background-position: 0 -560px; }
+.ProccesingImg3 { background: url( "../img/Proccesing.png" ); border: .01em grey solid; width: 300px; height: 400px; background-position: 0 -1119px; }
+.ProccesingImg4 { background: url( "../img/Proccesing.png" ); border: .01em grey solid; width: 300px; height: 200px; background-position: -1px -1684px; }
+.ProccesingImg5 { background: url( "../img/Proccesing.png" ); border: .01em grey solid; width: 300px; height: 440px; background-position: -1px -2329px; }
+.ProccesingImg6 { background: url( "../img/Proccesing.png" ); border: .01em grey solid; width: 300px; height: 520px; background-position: -1px -2770px; }
+/* LM_Object */
+.LM_ObjectImg1 { background: url( "../img/LM_Object.png" ); border: .01em grey solid; width: 240px; height: 370px; }
+.LM_ObjectImg2 { background: url( "../img/LM_Object.png" ); border: .01em grey solid; width: 300px; height: 320px; background-position: 0 -493px; }
+.LM_ObjectImg3 { background: url( "../img/LM_Object.png" ); border: .01em grey solid; width: 300px; height: 30px; background-position: -35px -896px; }
+.LM_ObjectImg4 { background: url( "../img/LM_Object.png" ); border: .01em grey solid; width: 300px; height: 30px; background-position: -35px -997px; }
+.LM_ObjectImg5 { background: url( "../img/LM_Object.png" ); border: .01em grey solid; width: 300px; height: 30px; background-position: -35px -1140px; }
+.LM_ObjectImg6 { background: url( "../img/LM_Object.png" ); border: .01em grey solid; width: 300px; height: 500px; background-position: 0 -1363px; }
+.LM_ObjectImg7 { background: url( "../img/LM_Object.png" ); border: .01em grey solid; width: 300px; height: 130px; background-position: -34px -1995px; }
+.LM_ObjectImg8 { background: url( "../img/LM_Object.png" ); border: .01em grey solid; width: 300px; height: 500px; background-position: 0 -2162px; }
+/* LM_3_4 */
+.LM_3_4Img1 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 170px; }
+.LM_3_4Img2 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 235px; background-position: 0 -182px; }
+.LM_3_4Img3 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 130px; background-position: 0 -427px; }
+.LM_3_4Img4 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 110px; background-position: -3px -640px; }
+.LM_3_4Img5 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 100px; background-position: 0 -785px; }
+.LM_3_4Img6 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 70px; background-position: -11px -899px; }
+.LM_3_4Img7 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 70px; background-position: -15px -985px; }
+.LM_3_4Img8 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 70px; background-position: 0 -1090px; }
+.LM_3_4Img9 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 70px; background-position: 0 -1202px; }
+.LM_3_4Img10 { background: url( "../img/LM3_4.png" ); border: .01em grey solid; width: 300px; height: 70px; background-position: 0 -1330px; }
+/* LM_6 */
+.LM_6Img1 { background: url( "../img/LM6.png" ); border: .01em grey solid; width: 300px; height: 398px; background-position: -70px 0; }
+.LM_6Img2 { background: url( "../img/LM6.png" ); border: .01em grey solid; width: 300px; height: 398px; background-position: -70px -399px; }
+.LM_6Img3 { background: url( "../img/LM6.png" ); border: .01em grey solid; width: 300px; height: 398px; background-position: -70px -825px; }
+
+/* monaca */
+.monacaImg13 { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 218px; height: 400px; background-position: -245px 0; }
+.monacaImg1S { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 218px; height: 400px; }
+.monacaImg23 { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 300px; height: 300px; background-position: -10px -543px; }
+.monacaImg2S { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 300px; height: 300px; background-position: -508px -543px; }
+.monacaImg33 { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 300px; height: 350px; background-position: 0 -937px; }
+.monacaImg35 { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 300px; height: 500px; background-position: -345px -970px; }
+.monacaImg3S { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 300px; height: 350px; background-position: 0 -1397px; }

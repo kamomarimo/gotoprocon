@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<title>[Processing]ものづくりプロジェクト&#8544;</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../../img/icon.png">
+		<link rel = "stylesheet" href = "../../css/sub_StyleSheet.css" />
+		<link rel = "stylesheet" href = "../../css/StyleSheet.css" />
+		<style>
+			input#acd-check1, input#acd-check2 { display: none; height: 0; }
+			.acd-label{ border-top:  .3em solid #2D5AA1; background: lightsteelblue; color: #2D5AA1; font-weight: bold; display: block; padding: .5rem; }
+			.acd-content{ height: 0; visibility: hidden; }
+			.acd-check:checked + .acd-label + .acd-content{ height: 100%; background-color: linen;  padding: 1em; visibility: visible; }
+			#footer { position: fixed; }
+			.acd-label::after{ width: .6em; height: .6em; margin-left: .2em; font-size: .7em; border-top: .3em solid #2D5AA1; border-right: .3em solid #2D5AA1; border-right-radius: 20px; border-radius: 0 .12em; content: ""; transform: translate( .5em,-.1em ) rotate( 135deg ); display: inline-block; margin-right: 1em; }
+			.acd-check:checked + .acd-label::after{ content: ""; width: .6em; height: .6em; margin-left: .2em; font-size: .7em; border-top: .3em solid #2D5AA1; border-right: .3em solid #2D5AA1; border-radius: 0 .12em; transform: translate( .5em, 0 ) rotate( -40deg ); display: inline-block; }
+		</style>
+	</head>
+	<body id = "Page_top">
+		<div id = "menu"><a href = "../../index.html" class = "ToHome"></a></div>
+		<h1 class = "making">ピースサインを検知する</h1>
+		<div id = "wrapper">
+			<div class = "MarginTB10">次の内容のプログラムを作成してください。</div>
+			<div class = "MarginTB05" id = "youken">
+				<div>[要件]</div>
+				<div>ピースサインを検知したら、人差し指と中指の丸図形を「任意の色（赤と白以外）」で表示する</div>
+			</div>
+			<div class = "paddingT1em">[指をすべて折りたたんでいるの場合]</div>
+			<div class = "LM_6Img1"></div>
+			<div class = "paddingT1em">[パーの場合]</div>
+			<div class = "LM_6Img2"></div>
+			<div class = "paddingT1em">[ピースサインの場合]<span class = "CodeMidnightblue">※青の図形で表示</span></div>
+			<div class = "LM_6Img3"></div>
+			<div class = "MarginTB05">
+				<div class = "FontBold">ヒント:</div>
+				<div class = "paddingL05">①指情報のオブジェクト仕様を調査し、人差し指と中指が出ている（手のひらで隠れていない）状態を判定する条件を、考えます。</div>
+				<div class = "paddingL05">②上の①がまとまったら、指の図形を色別に表示している箇所に埋め込んでみましょう。</div>
+			</div>
+			<input id="acd-check1" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check1">前回の演習問題の回答をみる</label>
+			<div class="acd-content">
+					<div class = "MarginTB10">※<a href = "https://antladybug.github.io/monozukuri/sub/leapmotion/leapmotionS3_5.html" target = "_blank" style = "text-decoration: underline solid red!important; }">前回の演習問題</a>の回答例です。参考にしてください。</div>
+				<div class = "MarginTB05" id = "youken">
+					<div>[要件]</div>
+					<div>手のひらで隠れていない指を、『青色』で表示する。</div>
+				</div>
+				<div class = "MarginTB05" id = "CodeSpace">
+					<div class="FileType">test_fingerblue.pde</div>
+					<div class="SorceCode" style = "counter-increment: StepNum 38!important;">void drawFingerTip(Hand hand) {</div>
+					<div class="SorceCode">&ensp;FingerList fingers = hand.fingers();</div>
+					<div class="SorceCode">&ensp;for(int i = 0; i < fingers.count(); i++) {</div>
+					<div class="SorceCode">&ensp;&ensp;Finger finger = fingers.get(i);</div>
+					<div class="SorceCode">&ensp;&ensp;Vector tipPos = finger.tipPosition();</div>
+					<div class="SorceCode">&ensp;&ensp;Vector tipPosNorm = iBox.normalizePoint(tipPos, false);</div>
+					<div class="SorceCode CodeYellow">&ensp;&ensp;if(finger.<span class = "CodeRed FontBold">isExtended()</span> == true) {</div>
+					<div class="SorceCode CodeYellow">&ensp;&ensp;&ensp;fill(<span class = "CodeDeepskyblue FontBold">0</span>, 0, <span class = "CodeDeepskyblue FontBold">255</span>);</div>
+					<div class="SorceCode">&ensp;&ensp;<span class = "CodeYellow">}</span> else {</div>
+					<div class="SorceCode">&ensp;&ensp;&ensp;fill(255, 255, 255);</div>
+					<div class="SorceCode">&ensp;&ensp;}</div>
+					<div class="SorceCode">&ensp;&ensp;pushMatrix();</div>
+					<div class="SorceCode">&ensp;&ensp;&ensp;translate(tipPosNorm.getX() * width,</div>
+					<div class="SorceCode">&ensp;&ensp;&ensp;(1 - tipPosNorm.getY()) * height,tipPosNorm.getZ() * 50);</div>
+					<div class="SorceCode">&ensp;&ensp;&ensp;noStroke();</div>
+					<div class="SorceCode">&ensp;&ensp;&ensp;lights();</div>
+					<div class="SorceCode">&ensp;&ensp;&ensp;sphere(20);</div>
+					<div class="SorceCode">&ensp;&ensp;popMatrix();</div>
+					<div class="SorceCode">&ensp;}</div>
+					<div class="SorceCode">}</div>
+				</div>
+				<div>45行目の<span class = "CodeDeepskyblue FontBold">青字の箇所</span>を変更します。</div>
+				<div>ここは検知した指のオブジェクトをループ処理で1本ずつ、色描画している箇所です。</div>
+				<div>44行目の『<span class = "CodeRed FontBold">isExtended</span>』は、対象の指が立っている（隠れていない）かどうかを返す関数です。</div>
+				<div>判定処理で、fill関数をコールします。</div>
+				<div>この関数は、引数が3つとも0の場合は白と描画し、赤は第1引数のみ255で指定します。</div>
+				<div>青は、第3引数のみ255と指定するため、上記のようなコード修正で対応可能です。</div>
+			</div>
+			<div class = "MarginTB10">以上です。</div>
+			<div id = "Step" style = "margin-left: 0!important;"><a href = "../leapmotion/leapmotion.html#MoveBase">もどる</a></div>
+			<div class = "Back"><a href = "../leapmotion/leapmotion.html#MoveBase"></a></div>
+			<div class = "ToTop"><a href = "#Page_top"></a></div>
+		</div>
+		<div id = "footer">COPYRIGHT© IWASAKI GAKUEN. ALL RIGHTS RESERVED.</div>
+	</body>
+</html>
