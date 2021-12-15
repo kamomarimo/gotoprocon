@@ -101,6 +101,18 @@ h1 { padding: .7em; font-size: 1.2em; color: white; background-color: #2D5AA1; m
 .LM_6Img2 { background: url( "../img/LM6.png" ); border: .01em grey solid; width: 300px; height: 398px; background-position: -70px -399px; }
 .LM_6Img3 { background: url( "../img/LM6.png" ); border: .01em grey solid; width: 300px; height: 398px; background-position: -70px -825px; }
 
+/* MESH */
+.meshApp { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 350px; height: 205px; }
+.meshAppDW { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 350px; height: 387px; background-position: 0 -204px; }
+.meshAppIS1 { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 350px; height: 200px; background-position: -350px 0; }
+.meshAppIS2 { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 348px; height: 110px; background-position: -361px -250px; }
+.meshAppIS3 { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 350px; height: 220px; background-position: -362px -374px; }
+.meshAppIS4 { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 350px; height: 278px; background-position: -727px 0 }
+.meshAppIS5 { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 350px; height: 273px; background-position: -1085px 0 }
+.meshAppIS6 { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 350px; height: 117px; background-position: -1090px -303px }
+.meshAppIS7 { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 348px; height: 160px; background-position: -1091px -440px }
+.meshAppIS8 { background: url( "../img/mesh.png" ); border: .01em grey solid; width: 348px; height: 180px; background-position: -1450px -1px }
+
 /* monaca */
 .monacaImg13 { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 218px; height: 400px; background-position: -245px 0; }
 .monacaImg1S { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 218px; height: 400px; }
@@ -112,3 +124,8 @@ h1 { padding: .7em; font-size: 1.2em; color: white; background-color: #2D5AA1; m
 .monacaImg4  { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 350px; height: 420px; background-position: -360px -1462px; }
 .monacaImg4E { background: url( "../img/Monaca.png" ); border: .01em grey solid; width: 300px; height: 430px; background-position: -790px -1450px; }
 
+/* java */
+.javaIt1 { background: url( "../img/installJava.png" ); border: .01em grey solid; width: 302px; height: 255px; background-position: 0 0; }
+.javaIt2 { background: url( "../img/installJava.png" ); border: .01em grey solid; width: 302px; height: 80px; background-position: 0 -245px; }
+.javaIt3 { background: url( "../img/installJava.png" ); border: .01em grey solid; width: 270px; height: 160px; background-position: -323px 0; }
+.javaIt4 { background: url( "../img/installJava.png" ); border: .01em grey solid; width: 278px; height: 122px; background-position: -323px -200px; }
